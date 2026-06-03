@@ -179,3 +179,18 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Agent instructions
+AGENTS.md
+
+# Dataset files (download or generate locally)
+Data/
+
+# Model checkpoints and exports
+models/
+*.pt
+*.bin
+*.onnx
+
+# Jupyter notebook cruft
+notebooks/.ipynb_checkpoints/
