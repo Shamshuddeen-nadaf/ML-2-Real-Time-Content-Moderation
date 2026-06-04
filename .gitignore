@@ -188,6 +188,7 @@ Data/
 
 # Model checkpoints and exports
 models/
+Models/
 *.pt
 *.bin
 *.onnx
