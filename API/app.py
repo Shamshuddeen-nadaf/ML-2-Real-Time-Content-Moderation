@@ -26,7 +26,7 @@ def softmax(x):
 def moderate(req:ModerateRequest):
   inputs = tokenizer(req.text,return_tensors='np',padding='max_length',max_length=128,truncation=True)
   logits= session.run(None, {"input_ids":inputs["input_ids"],"attention_mask":inputs["attention_mask"]})[0]
-  probs = softmax(logits[0])
+  probs = softmax(logits[0]) #type:ignore
   toxic_prob = float(probs[1])
   return ModerateResponse(
     toxic = toxic_prob > 0.5,
